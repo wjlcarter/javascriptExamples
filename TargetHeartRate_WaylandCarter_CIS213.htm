@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+		CIS213 Midterm Exam Part 2
+		Author: Wayland Carter
+		Date: 6/2/2020
+	-->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Midterm PE</title>
+</head>
+
+<body>
+	<header>
+		<h1>Wayland Carter, Target Heart Rate</h1>
+	</header>
+	
+	<article>
+		<label>Your Age</label>
+			<input type="text" id="age" value="">
+			<input type="button" value="Calculate Target Heart Rate" onclick="calcHeartRate()">
+			<p id="display"></p>
+		<script>
+
+		function calcHeartRate()
+		{
+			var age = document.getElementById("age").value;
+			var maxHR=220-age;
+			var minTHR=maxHR*.5;
+			var maxTHR=maxHR*.85;
+			document.getElementById("display").innerHTML = 
+			"Target Heart Rate: " + Math.round(minTHR) + " to " + Math.round(maxTHR) + " Beats Per Minute";
+		}
+		
+		</script>
+		
+	</article>
+
+</body>
+</html>
